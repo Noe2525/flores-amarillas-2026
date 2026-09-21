@@ -1,5 +1,5 @@
 const $=id=>document.getElementById(id);
-const messages=['Tu sonrisa tiene esa bonita costumbre de alegrarme el día.','Hay algo en tu forma de ser que vuelve especial hasta lo más sencillo.','Me gusta pensarte. Y me gusta todavía más coincidir contigo.','Si hoy te faltaba una razón para sonreír, ojalá este detalle sea una.','Entre todas las cosas bonitas que podía regalarte, elegí un poquito de sol para ti.'];
+const messages=['Su sonrisa tiene esa bonita costumbre de alegrarme el día.','Hay algo en su forma de ser que vuelve especial hasta lo más sencillo.','Me gusta pensar en usted. Y me gusta todavía más coincidir con usted.','Si hoy le faltaba una razón para sonreír, ojalá este detalle sea una.','Entre todas las cosas bonitas que podía regalarte, elegí un poquito de sol para usted.'];
 let found=new Set(),stage='welcome',opening=false;
 function showScene(next){stage=next;for(const id of ['welcome','lightsScene','gift'])$(id).hidden=id!==next;}
 async function openEnvelope(){if(stage!=='welcome'||opening)return;opening=true;$('envelope').classList.add('opening');await new Promise(r=>setTimeout(r,550));showScene('lightsScene');opening=false;$('lights').firstElementChild.focus({preventScroll:true});}
